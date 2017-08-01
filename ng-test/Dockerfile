@@ -9,7 +9,7 @@ ENV VERSION=1.0.0 \
 ## 改变默认首页内容
 COPY ./index.html /usr/share/nginx/html/
 
-VOLUME $VOLUME_BASE/ng-test/data
+VOLUME $VOLUME_BASE/data
 
 EXPOSE 80
 
