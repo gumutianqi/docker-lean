@@ -15,7 +15,9 @@ EXPOSE 80
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+RUN apt-get update \
+    && apt-get install -y curl \
+    && rm -rf /var/lib/apt/lists/*
 
 HEALTHCHECK  --interval=5s --timeout=3s CMD curl http://localhost/ || exit 1
 
